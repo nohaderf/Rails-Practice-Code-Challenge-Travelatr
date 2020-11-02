@@ -1,0 +1,7 @@
+<h1><%= @blogger.name %></h1>
+
+Total Likes: <%= @blogger.posts.count {|post| post.likes } %>
+
+<% @blogger.posts.each do |post| %>
+<%= link_to @featured_post, post_path(post) %>
+<% end %>
